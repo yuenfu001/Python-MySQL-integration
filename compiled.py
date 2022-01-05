@@ -56,3 +56,14 @@ def execute_query(connection, query):
     
     except Error as err:
         print(f" Error: {err}")
+
+def import_csv(connection, sql, df):
+    cursor = connection.cursor()
+    # sql = "INSERT INTO taskdb (DateTime,NOx,NO2,NO,SiteID,PM10,NVPM10,VPM10,NVPM2,PM2,VPM2,CO,O3,SO2,Temperature,RH,AirPressure,Location,geo_point_2d,DateStart,DateEnd,Current,InstrumentType) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+    print("Importing csv")
+    for i in df:
+        print(i)
+        cursor.execute(sql,i)
+    connection.commit()
+    cursor.close()
+    print("Done")

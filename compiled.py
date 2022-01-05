@@ -2,6 +2,7 @@ import mysql.connector as mysql
 from mysql.connector import Error
 import pandas as pd
 
+# CREATE A SERVER CONNECTION BETWEEN PYTHON AND MYSQL SERVER CRTL+/ = commenting 
 def create_server_conn(hostname, user_name, password):
     connection = None
     try:

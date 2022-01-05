@@ -1,4 +1,3 @@
-
 from mysql.connector import connection
 import modules
 
@@ -13,7 +12,6 @@ while True:
     if var == "1":
         print("CREATE A DATABASE USING THIS PROGRAM")
         name = input("Enter your desired database name: ")
-        
         modules.create_db(connect,name)
     elif var == "2":
         print("CREATE A TABLE OR INSERT VALUES INTO TABLE")

@@ -5,3 +5,4 @@
 - install mysql-connector-python and pandas(poetry add mysql-connector-python pandas)
 - initialize poetry venv(poetry shell) before running any command
 - run the main.py file
+- a contributors branch was created for those who want to contribute to the program
